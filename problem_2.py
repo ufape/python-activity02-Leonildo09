@@ -31,15 +31,13 @@ def main():
     b = float(input('Digite o valor B: '))
     c = float(input('Digite o valor C: '))
 
-    x = (b**2 - 4*a*c)
+    delta = b**2 - 4*a*c
 
-    if a == 0 or x < 0 or x == 0:
-      print('Impossível Calcular')
-      
+    if a == 0 or delta < 0:
+      print('Impossível Calcular')      
     else:
-      R1 = (-b - math.sqrt(x)) / (2*a)
-      R2 = (-b + math.sqrt(x)) / (2*a)
-      
+      R1 = (-b + delta**0.5) / (2*a)
+      R2 = (-b - delta**0.5) / (2*a)
       print(f'R1 = {R1:.3f}')
       print(f'R2 = {R2:.3f}')
 

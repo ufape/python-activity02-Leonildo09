@@ -24,10 +24,24 @@ R1 = -0.297
 R2 = -2.712
 """
 
+import match
 
 def main():
-    pass  # your code here
+    a = float(input('Digite o valor A: '))
+    b = float(input('Digite o valor B: '))
+    c = float(input('Digite o valor C: '))
 
+    x = (b**2 - 4*a*c)
+
+    if a == 0 or x < 0 or x == 0:
+      print('Impossível Calcular')
+      
+    else:
+      R1 = (-b - math.sqrt(x)) / (2*a)
+      R2 = (-b + math.sqrt(x)) / (2*a)
+      
+      print(f'R1 = {R1:.3f}')
+      print(f'R2 = {R2:.3f}')
 
 if __name__ == '__main__':
     main()

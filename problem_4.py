@@ -28,7 +28,15 @@ Você digitou 3 valores pares.
 
 
 def main():
-    pass  # your code here
+    num_pares = 0
+
+    for i in range(6):
+      valor = int(input(f'Digite o valor {i+1}/6:'))
+
+      if valor % 2 == 0:
+        num_pares += 1
+        
+    print(f'Você digitou {num_pares} valores pares.')
 
 
 if __name__ == '__main__':
